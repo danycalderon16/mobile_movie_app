@@ -10,6 +10,7 @@ import { ActivityIndicator, FlatList, Image, ScrollView, Text, View } from "reac
 export default function Index() {
   const router = useRouter();
 
+  const test = process.env.EXPO_PUBLIC_MOVIE_API_KEY
   const { 
     data: movies,
     error: moviesError,
@@ -20,6 +21,7 @@ export default function Index() {
 
   return (
     <View className="flex-1 bg-primary">
+      <Text className="text-white text-lg">{test}</Text>
       <Image source={images.bg}
         className="absolute w-full z-0" />
       <ScrollView className="flex-1 px-5"
